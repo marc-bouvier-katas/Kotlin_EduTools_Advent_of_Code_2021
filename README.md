@@ -25,6 +25,10 @@ at most 15 seconds on ten-year-old hardware.
 If you'd like to support Advent of Code, please go to [adventofcode.com/2021/about](https://adventofcode.com/2021/about)
 and follow the instructions once there.
 
+## About spoilers
+
+This course does not contain the answers of the real advent of code problems. I deliberately used partial or different puzzle input for the final acceptation test of each lesson.
+
 ## Contribute
 
 If you have suggestions or issues about this Course
