@@ -1,0 +1,15 @@
+type: marketplace
+title: Kotlin Advent of Code 2021 (unofficial)
+language: English
+summary: |-
+  <p>Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as a speed contest, interview prep, company training, university coursework, practice problems, or to challenge each other. The presented material is based on <a href="https://adventofcode.com">adventofcode.com</a>. </p>
+
+  <p>You don't need a computer science background to participate - just a little programming knowledge and some problem solving skills will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.</p>
+
+  <p>If you'd like to support Advent of Code, please go to <a href="https://adventofcode.com/2021/about">adventofcode.com/2021/about</a> and follow the instructions once there.</p>
+
+  <p>If you have suggestions or issues about this Course please create and issue at <a href=""></a>.</p>
+programming_language: Kotlin
+content:
+- Day 1
+- Day 2
