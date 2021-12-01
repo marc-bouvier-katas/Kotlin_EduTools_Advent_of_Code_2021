@@ -3,8 +3,13 @@
 **DISCLAIMER: I am not affiliated with the official Advent of code event or website.**
 
 To open this course, you need to use either IntelliJ IDEA Edu or IntelliJ IDEA with Edu tools plugin installed.
-Please [follow the instructions here](https://plugins.jetbrains.com/plugin/10081-edutools/docs/learner-start-guide.html)
+
+Please [follow the installation instructions here](https://plugins.jetbrains.com/plugin/10081-edutools/docs/learner-start-guide.html)
 .
+
+Then, you can checkout this repo and open it from the IDE as a course "from disk".
+
+![Open course from disk](open_from_disk.png)
 
 ## Summary
 
