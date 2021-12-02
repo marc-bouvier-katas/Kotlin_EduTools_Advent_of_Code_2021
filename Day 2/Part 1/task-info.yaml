@@ -5,4 +5,4 @@ files:
 - name: test/Tests.kt
   visible: false
 - name: src/test/resources/full_input.txt
-  visible: true
+  visible: false

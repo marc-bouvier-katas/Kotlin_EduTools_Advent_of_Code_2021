@@ -4,3 +4,5 @@ files:
   visible: false
 - name: src/Task.kt
   visible: true
+- name: src/test/resources/full_input.txt
+  visible: false
