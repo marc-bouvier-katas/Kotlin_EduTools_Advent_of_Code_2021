@@ -9,6 +9,8 @@ summary: |-
   <p>If you'd like to support Advent of Code, please go to <a href="https://adventofcode.com/2021/about">adventofcode.com/2021/about</a> and follow the instructions once there.</p>
 
   <p>If you have suggestions or issues about this Course please create an issue at <a href="https://github.com/marc-bouvier-katas/Kotlin_EduTools_Advent_of_Code_2021">this repository</a>.</p>
+vendor:
+  name: Marc Bouvier
 programming_language: Kotlin
 content:
 - Day 1
