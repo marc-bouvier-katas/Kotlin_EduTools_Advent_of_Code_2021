@@ -34,3 +34,7 @@ This course does not contain the answers of the real advent of code problems. I 
 If you have suggestions or issues about this Course
 please [create an issue here](https://github.com/marc-bouvier-katas/Kotlin_EduTools_Advent_of_Code_2021).
 
+## Other resources
+
+- [Advent of Code Kotlin Template](https://github.com/kotlin-hands-on/advent-of-code-kotlin-template)
+- [The Kotlin Blog - Advent of Code 2021 in Kotlin – Win Prizes, Solve Problems, Have Fun!](https://blog.jetbrains.com/kotlin/2021/11/advent-of-code-2021-in-kotlin/)
