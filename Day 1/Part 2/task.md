@@ -1,4 +1,4 @@
-# Day 1: Sonar Sweep --- Part Two ---
+# Day 1: Sonar Sweep - Part Two
 
 https://adventofcode.com/2021/day/1
 
