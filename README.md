@@ -7,7 +7,7 @@ To open this course, you need to use either IntelliJ IDEA Edu or IntelliJ IDEA w
 Please [follow the installation instructions here](https://plugins.jetbrains.com/plugin/10081-edutools/docs/learner-start-guide.html)
 .
 
-Then, you can checkout this repo and open it from the IDE as a course "from disk".
+Then, you can [download the packaged course zip from releases](https://github.com/marc-bouvier-katas/Kotlin_EduTools_Advent_of_Code_2021/releases) and open it from the IDE as a course "from disk".
 
 ![Open course from disk](open_from_disk.png)
 
