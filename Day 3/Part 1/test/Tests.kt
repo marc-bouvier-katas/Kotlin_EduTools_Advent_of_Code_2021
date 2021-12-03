@@ -1,7 +1,7 @@
 import org.junit.Assert
 import org.junit.Test
 
-class Test {
+class Day3Part1Test {
 
     @Test
     fun testInput01() {
