@@ -6,3 +6,5 @@ files:
   visible: false
 - name: src/test/resources/full_input.txt
   visible: false
+- name: test/YourOwnTests.kt
+  visible: true

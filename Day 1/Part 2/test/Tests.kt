@@ -1,4 +1,4 @@
-import org.junit.Assert
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 class Day1Part2Test {
@@ -7,7 +7,6 @@ class Day1Part2Test {
     fun testInput01() {
         assertSolutionWorks("01", 0, arrayOf(199, 200, 208))
     }
-
 
     @Test
     fun testInput02() {
@@ -44,21 +43,21 @@ class Day1Part2Test {
             .take(1000) // I take half the file content in order to not spoil the Calendar result
             .toTypedArray()
         val actual = increasesInSlidingWindow(fullInput)
-        assertSolutionWorksWithPuzzleInputSource( actual, 552)
+        assertSolutionWorksWithPuzzleInputSource(actual, 552)
     }
 
     private fun assertSolutionWorks(testNumber: String, expected: Int, measurements: Array<Int>) {
         val actual = increasesInSlidingWindow(measurements)
         val formattedMeasurements = measurements.joinToString(", ", "[", "]")
-        Assert.assertEquals(
-            "Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements",
-            expected,
-            actual
-        )
+        assertThat(actual)
+            .withFailMessage("Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements")
+            .isEqualTo(expected)
     }
 
     private fun assertSolutionWorksWithPuzzleInputSource(actual: Int, expected: Int) {
-        Assert.assertEquals("Wrong answer with data from half the puzzle input file content", expected, actual)
+        assertThat(actual)
+            .withFailMessage("Wrong answer with data from half the puzzle input file content")
+            .isEqualTo(expected)
     }
 
 }

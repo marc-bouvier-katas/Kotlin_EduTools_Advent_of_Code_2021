@@ -1,4 +1,4 @@
-import org.junit.Assert
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 class Day1Part1Test {
@@ -64,15 +64,15 @@ class Day1Part1Test {
     private fun assertSolutionWorks(testNumber: String, expected: Int, measurements: Array<Int>) {
         val actual = measurementIncreases(measurements)
         val formattedMeasurements = measurements.joinToString(", ", "[", "]")
-        Assert.assertEquals(
-            "Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements",
-            expected,
-            actual
-        )
+        assertThat(actual)
+            .withFailMessage("Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements")
+            .isEqualTo(expected)
     }
 
     private fun assertSolutionWorksWithPuzzleInputSource(actual: Int, expected: Int) {
-        Assert.assertEquals("Wrong answer with data from half the puzzle input file content", expected, actual)
+        assertThat(actual)
+            .withFailMessage("Wrong answer with data from half the puzzle input file content")
+            .isEqualTo(expected)
     }
 
 }

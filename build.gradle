@@ -36,6 +36,7 @@ subprojects {
 
     dependencies {
         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+        testImplementation group : 'org.assertj', name: 'assertj-core', version: '3.21.0'
         testImplementation group: 'junit', name: 'junit', version: '4.12'
     }
 
@@ -86,6 +87,7 @@ subprojects {
 project(':util') {
     dependencies {
         implementation group: 'junit', name: 'junit', version: '4.12'
+        implementation group : 'org.assertj', name: 'assertj-core', version: '3.21.0'
     }
 }
 

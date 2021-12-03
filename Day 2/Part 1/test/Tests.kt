@@ -1,5 +1,6 @@
-import org.junit.Assert
-import org.junit.Test
+import org.assertj.core.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
 
 class Day2Part1Test {
 
@@ -74,14 +75,14 @@ class Day2Part1Test {
     private fun assertSolutionWorks(testNumber: String, expected: Int, measurements: Array<String>) {
         val actual = pilotSubmarine(measurements)
         val formattedMeasurements = measurements.joinToString(", ", "[", "]")
-        Assert.assertEquals(
-            "Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements",
-            expected,
-            actual
-        )
+        assertThat(actual)
+            .withFailMessage("Test #$testNumber : Expected $expected, but was $actual. Measures provided were : $formattedMeasurements")
+            .isEqualTo(expected)
     }
 
     private fun assertSolutionWorksWithPuzzleInputSource(actual: Int, expected: Int) {
-        Assert.assertEquals("Wrong answer with data from half the puzzle input file content", expected, actual)
+        Assertions.assertThat(actual)
+            .withFailMessage("Wrong answer with data from half the puzzle input file content")
+            .isEqualTo(expected)
     }
 }
