@@ -29,6 +29,11 @@ and follow the instructions once there.
 
 This course does not contain the answers of the real advent of code problems. I deliberately used partial or different puzzle input for the final acceptation test of each lesson.
 
+
+## About TDD
+
+In each problem, if you want to practice Test-Driven-Development, you can write you own tests in the following file : `test/YourOwnTests.kt`
+
 ## Contribute
 
 If you have suggestions or issues about this Course
