@@ -61,5 +61,4 @@ I deliberately used half of the puzzle input file lines for the final acceptatio
 
 ## About TDD
 
-If you want to practice Test-Driven-Development, you will want to write you own tests to drive your design.
-You can write you own tests here in the following file : `test/YourOwnTests.kt`
+If you want to practice Test-Driven-Development, you can write you own tests in the following file : `test/YourOwnTests.kt`
