@@ -119,26 +119,6 @@ class TestDay4Part1 {
         assertSolutionWorks("09", 924, "2", "14", input)
     }
 
-    @Test
-    fun testInput10_3_boards_3x3_one_winner_board_3_from_row() {
-        val input = arrayOf(
-            "1,3,9,8,4,2", // random numbers
-            "",
-            " 1  3 99", // __ __ 99
-            " 4  5  8", // __  5 __
-            " 7 10 20", //  7 10 20
-            "",
-            " 1  4  6", // __ __  6
-            " 8 10 12", // __ 10 12
-            "14 16 18", // 14 16 18
-            "",
-            " 1  2  3", // __ __ __    Last drawn number : 2
-            " 4  5  6", // __  5  6       5 + 6 + 7 = 18
-            " 7  8  9", //  7 __ __       18 * 2 = 36
-        )
-        assertSolutionWorks("10", 36, "3", "2", input)
-    }
-
 
     @Test
     fun testInput10_3_boards_3x3() {
@@ -160,9 +140,31 @@ class TestDay4Part1 {
         assertSolutionWorks("10", 36, "3", "2", input)
     }
 
+    @Test
+    fun testInput11_3_boards_3x3_two_winners_board_1_from_row() {
+        val input = arrayOf(
+            "1,3,9,8,4,2,99,98", // random numbers
+            "",
+            " 1  3 99", // __ __ __    [2] Last drawn number : 99
+            " 4  5  8", // __  5 __       5 + 7 + 10 + 20 = 42
+            " 7 10 20", //  7 10 20       42 * 99 = 4158
+            "",
+            " 1  4  6", // __ __  6
+            " 8 10 12", // __ 10 12
+            "14 16 18", // 14 16 18
+            "",
+            " 1  2  3", // __ __ __    [1] Last drawn number : 2
+            " 4  5  6", // __  5  6       5 + 6 + 7 = 18
+            " 7  8  9", //  7 __ __       18 * 2 = 36
+        )
+        assertSolutionWorks("11", 36, "3", "2", input)
+    }
+
+
+
 
     @Test
-    fun testInput11_sample_input_3_boards_5x5() {
+    fun testInput12_sample_input_3_boards_5x5() {
         val input = arrayOf(
             "7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1",
             "",
@@ -184,7 +186,7 @@ class TestDay4Part1 {
             "22 11 13  6  5",
             " 2  0 12  3  7",
         )
-        assertSolutionWorks("11", 4512, "3", "24", input)
+        assertSolutionWorks("12", 4512, "3", "24", input)
     }
 
     @Test
@@ -202,14 +204,14 @@ class TestDay4Part1 {
     private fun assertSolutionWorks(
         testNumber: String,
         expected: Int,
-        expectedLastWinnerBoard: String,
+        expectedFirstWinnerBoard: String,
         expectedLastNumberDrawn: String,
         measurements: Array<String>
     ) {
         val actual = solveBingo(measurements)
         val formattedInputs = measurements.joinToString("\n")
         Assert.assertEquals(
-            "Test #$testNumber : Expected score $expected, but was $actual. Expected winner board : $expectedLastWinnerBoard with last number drawn: $expectedLastNumberDrawn. Inputs provided were : \n$formattedInputs",
+            "Test #$testNumber : Expected score $expected, but was $actual. Expected winner board : $expectedFirstWinnerBoard with last number drawn: $expectedLastNumberDrawn. Inputs provided were : \n$formattedInputs",
             expected,
             actual
         )
@@ -218,11 +220,11 @@ class TestDay4Part1 {
     private fun assertSolutionWorksWithPuzzleInputSource(
         actual: Int,
         expected: Int,
-        expectedLastWinnerBoard: String,
+        expectedFirstWinnerBoard: String,
         expectedLastNumberDrawn: String,
     ) {
         Assert.assertEquals(
-            "Wrong answer with data from a small portion of the puzzle input file content. Expected score $expected, but was $actual. Expected winner board : $expectedLastWinnerBoard with last number drawn: $expectedLastNumberDrawn.",
+            "Wrong answer with data from a small portion of the puzzle input file content. Expected score $expected, but was $actual. Expected winner board : $expectedFirstWinnerBoard with last number drawn: $expectedLastNumberDrawn.",
             expected,
             actual
         )

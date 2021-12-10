@@ -140,6 +140,26 @@ class TestDay4Part2 {
     }
 
     @Test
+    fun testInput11_3_boards_3x3_two_winners_board_1_from_row() {
+        val input = arrayOf(
+            "1,3,9,8,4,2,99,98", // random numbers
+            "",
+            " 1  3 99", // __ __ __    [2] Last drawn number : 99
+            " 4  5  8", // __  5 __       5 + 7 + 10 + 20 = 42
+            " 7 10 20", //  7 10 20       42 * 99 = 4158
+            "",
+            " 1  4  6", // __ __  6
+            " 8 10 12", // __ 10 12
+            "14 16 18", // 14 16 18
+            "",
+            " 1  2  3", // __ __ __    [1] Last drawn number : 2
+            " 4  5  6", // __  5  6       5 + 6 + 7 = 18
+            " 7  8  9", //  7 __ __       18 * 2 = 36
+        )
+        assertSolutionWorks("10", 4158, "1", "99", input)
+    }
+
+    @Test
     fun testInput11_sample_input() {
         val input = arrayOf(
             "7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1",
